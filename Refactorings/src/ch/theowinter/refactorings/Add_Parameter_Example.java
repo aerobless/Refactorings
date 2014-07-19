@@ -4,7 +4,7 @@ public class Add_Parameter_Example {
 	
 	/* 
 	 * Name: Add Parameter
-	 * Inverse refactoring: Remove Parameter
+	 * Inverse Refactoring: Remove Parameter
 	 * Description: A method requires more information from its caller.
 	 * 
 	 * Eclipse Refactoring Option: YES
