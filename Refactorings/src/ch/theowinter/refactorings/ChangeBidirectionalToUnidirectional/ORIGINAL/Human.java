@@ -1,4 +1,4 @@
-package ch.theowinter.refactorings.ChangeBidirectionalToUnidirectional.BEFORE;
+package ch.theowinter.refactorings.ChangeBidirectionalToUnidirectional.ORIGINAL;
 
 /* 
  * Name: Change Bidirectional Association to Unidirectional
@@ -10,11 +10,12 @@ package ch.theowinter.refactorings.ChangeBidirectionalToUnidirectional.BEFORE;
  * Eclipse Refactoring Option: NO
  */
 
-public class Dog {
+public class Human {
 	private String name;
-	private String favouriteToy;
+	private int age;
+	private String address;
 	
-	private Human myOwner;
+	private Dog myDog;
 
 	
 	//Getters & Setters
@@ -26,19 +27,28 @@ public class Dog {
 		this.name = name;
 	}
 
-	public String getFavouriteToy() {
-		return favouriteToy;
+	public int getAge() {
+		return age;
 	}
 
-	public void setFavouriteToy(String favouriteToy) {
-		this.favouriteToy = favouriteToy;
+	public void setAge(int age) {
+		this.age = age;
 	}
 
-	public Human getMyOwner() {
-		return myOwner;
+	public String getAddress() {
+		return address;
 	}
 
-	public void setMyOwner(Human myOwner) {
-		this.myOwner = myOwner;
+	public void setAddress(String address) {
+		this.address = address;
+	}
+
+	public Dog getMyDog() {
+		return myDog;
+	}
+
+	public void setMyDog(Dog myDog) {
+		this.myDog = myDog;
+		myDog.setMyOwner(this);
 	}
 }
