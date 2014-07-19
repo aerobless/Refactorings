@@ -11,12 +11,12 @@ public class Add_Parameter_Example {
 	 * Name: Change Method Signature
 	 */
 	
-	//BEFORE REFACTORING:
+	//ORIGINAL:
 	public void someMethod(){
 		System.out.println("do something");
 	}
 	
-	//AFTER REFACTORING:
+	//REFACTORED:
 	public void someMethodWithParameter(String parameter){
 		System.out.println("do something with"+ parameter);
 	}
