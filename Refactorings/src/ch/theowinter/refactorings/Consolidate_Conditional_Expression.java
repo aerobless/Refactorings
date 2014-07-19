@@ -13,20 +13,27 @@ public class Consolidate_Conditional_Expression {
 	 */
 	
 	//ORIGINAL:
-	public void doSomething(String input){
-		if(input.equals("hello") && input.length()>3 && !input.isEmpty()){
-			System.out.println("pointless tests, I know.");
-		}
+	public int doSomething(String input){
+		if(input.equals("hello")) return 0;
+		if(input.length()>3) return 0;
+		if(!input.isEmpty()) return 0;
+		
+		//Compute something
+		return 2*3;
 	}
 
 	//REFACTORED:
-	public void doSomethingRefactored(String input){
-		if(isHello(input)){
-			System.out.println("pointless tests, I know.");
-		}
+	public int doSomethingRefactored(String input){
+		if(isHello(input)) return 0;
+		
+		//Compute something
+		return 2*3;
 	}
-
+	
 	private boolean isHello(String input) {
-		return input.equals("hello") && input.length()>3 && !input.isEmpty();
+		if(input.equals("hello")) return true;
+		if(input.length()>3) return true;
+		if(!input.isEmpty()) return true;
+		return false;
 	}
 }
